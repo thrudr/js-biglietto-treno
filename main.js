@@ -16,19 +16,23 @@ let underage = passagerAge < 18;
 let overSixtfifth = passagerAge > 65;
 
 console.log("The ticket price: " + ticketPrice);
-console.log("Ticket price in decimal value: " + decimalValue);
+console.log("Ticket price in decimal value: " + decimalValue + "£");
 
 //Ticket price value.
 if(underage) {
 
     let underageDiscount = ticketPrice * 20 / 100;
-    let underTotalPrice = decimalValue - underageDiscount;
+    let underTicket = decimalValue - underageDiscount;
+    console.log("Total wiht discount 20%: " + underTicket + "£");
+
 } else if (overSixtfifth) {
 
     let overSixtfifthDiscount = ticketPrice * 40 / 100;
-    let overTotalPrice = decimalValue - overSixtfifthDiscount;
+    let overTicket = decimalValue - overSixtfifthDiscount;
+    console.log("Total whith discount 40%: " + overTicket + "£");
+
 } else {
-    
+    let totalPrice = decimalValue;
+    console.log("Total: " + totalPrice + "£");
 }
 
-console.log()
